@@ -32,3 +32,31 @@ header {
     box-shadow: 1px 5px 10px -5px black;
     transition: all 0.3s ease;
 }
+.menu li ul {
+    position: absolute;
+    list-style: none;
+    margin-left: -68px;
+    display: none;
+    text-decoration: none;
+}
+.menu li > ul li {
+    border: 1px solid gray;
+    text-align: center;
+    min-width: 160px;
+    max-width: 160px;
+}
+.menu li > ul li a:hover {
+    padding: 10px;
+    background: indigo;
+    text-align: center;
+}
+.menu li:hover > ul {
+    display: block;
+}
+.menu li > ul li ul {
+    position: absolute;
+    right: -160px;
+    top: 45px;
+    min-width: 160px;
+    max-width: 160px;
+}
