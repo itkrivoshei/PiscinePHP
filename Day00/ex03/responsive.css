@@ -1,0 +1,72 @@
+body {
+    background-image: url(http://icons.iconarchive.com/icons/icons8/ios7/128/Maps-Satellites-icon.png);
+    background-color: blueviolet;
+    background-size: 5%;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+h1 {
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+}
+p {
+    font-size: 1vw;
+}
+td {
+    width: 5%;
+    height: 60%;
+    border: 1px solid black;
+}
+.elem {
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+}
+.hidden{
+    border: none;
+}
+.nbr_weight {
+    margin-right: 2px;
+    text-align: right;
+    margin: 0;
+}
+.nbr_number {
+    margin-left: 2px;
+    text-align: left;
+    margin: 0;
+}
+.color_1 {
+    background-color: #a0ffa0;
+}
+.color_2 {
+    background-color: #ffc0c0;
+}
+.color_3 {
+    background-color: #c0ffff;
+}
+.color_4 {
+    background-color: #ffff99;
+}
+.color_5 {
+    background-color: #cccc99;
+}
+.color_6 {
+    background-color: #afb6bc;
+}
+
+.color_7 {
+    background-color: #ffbfff;
+}
+.color_8 {
+    background-color: #ef99cc;
+}
+.color_9 {
+    background-color: #ff6666;
+}
+.color_10 {
+    background-color: #ffdead;
+}
