@@ -4,33 +4,32 @@ function Pointer(element) {
     element.innerHTML = "Hi! Use Hand and touch the girl :)"
 }
 function Hand(element) {
-    cursor: url(resources/loupe.png);
-    element.innerHTML = "Hoo";
+    element.innerHTML = "You can touch something";
 }
 function Eye(element) {
-    element.innerHTML = "Hi! Use Hand and touch the girl :)";
+    element.innerHTML = "You can Watch something";
 }
 function Tool(element) {
-    element.innerHTML = "Hi! Use Hand and touch the girl :)";
+    element.innerHTML = "You Can Fix Something";
 }
 function Dialog(element) {
-    element.innerHTML = "Hi! Use Hand and touch the girl :)";
+    element.innerHTML = "You can talk with somebody";
 }
 function Book(element) {
     element.innerHTML = "Hi! Use Hand and touch the girl :)";
 }
 function Towel(element) {
-    element.innerHTML = "Hi! Use Hand and touch the girl :)";
+    element.innerHTML = "You can do TIG";
 }
 function Bricks(element) {
-    element.innerHTML = "Hi! Use Hand and touch the girl :)";
+    element.innerHTML = "TIK TOK";
 }
 function Close(element) {
-    element.innerHTML = "Hi! Use Hand and touch the girl :)";
+    window.close();
 }
 function Reload(element) {
-    element.innerHTML = "Hi! Use Hand and touch the girl :)";
+    location.reload(); 
 }
 function Day42(element) {
-    element.innerHTML = "Hi! Use Hand and touch the girl :)";
+    location.reload(); 
 }

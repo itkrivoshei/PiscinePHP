@@ -98,6 +98,7 @@ p {
 }
 .day42 {
     width: 35%;
+    cursor: pointer;
 }
 .loupe {
     width: 22%;
@@ -108,12 +109,14 @@ p {
     width: 60%;
     display: block;
     margin-left: 35%;
+    cursor: pointer;
 }
 .close {
     width: 60%;
     display: block;
     margin-top: 210%;
     margin-left: 35%;
+    cursor: pointer;
 }
 .brick {
     display: block;
@@ -123,6 +126,7 @@ p {
 .bricks {
     background : url("resources/brick.jpg");
     background-size: 27%;
+    cursor: pointer;
 }
 .bricks:hover  {
     border: 2px solid red;
@@ -160,6 +164,7 @@ p {
 }
 /* Hide */
 .ikea {
+    cursor: pointer;
     width: 15%;
     height: 120px;
     float: right;
@@ -168,6 +173,7 @@ p {
     position: relative;
 }
 .apple {
+    cursor: pointer;
     width:20%;
     height: 80px;
     float: right;
@@ -189,8 +195,6 @@ p {
     margin-left: 3%;
 }
 .right-block {
-    position: relative;
-    height: 60px;
     width: 8%;
     padding: 1%;
     float: right;
@@ -204,8 +208,6 @@ p {
     margin-top: -3px;
 }
 .left-block{
-    position: relative;
-    height: 200px;
     width: 8%;
     padding: 1%;
     float: left;

@@ -6,14 +6,10 @@
 </head>
 <body>
     <div class="gray-block top-block">
-        <img src="resources/day_of_the_42.png" class="day42"/>
+        <img src="resources/day_of_the_42.png" class="day42" onclick="Day42()"/>
         <div class="top-right">
-            <a href="http://www.disney.com/" target="blank">
-                <img src="resources/reload.png" class="reload"/>
-            </a>
-            <a href="https://www.relaischateaux.com/" target="blank">
-                <img src="resources/close.gif" class="close"/>
-            </a>
+            <img src="resources/reload.png" class="reload" onclick="Reload()"/>
+            <img src="resources/close.gif" class="close" onclick="Close()"/>
         </div>
         <img src="resources/loupe.png" class="loupe"/>
     </div>
@@ -21,25 +17,25 @@
         <div class="gray-block left-block">
             <img src="resources/arrow.png" class="arrow" onclick="Pointer(one)"/>
             <img src="resources/main.png" class="main" onclick="Hand(one)"/>
-            <img src="resources/oeil.png" class="eye"/>
-            <img src="resources/outil.png" class="tools"/>
-            <img src="resources/chat-icon.png" class="chat-icon"/>
+            <img src="resources/oeil.png" class="eye" onclick="Eye(one)"/>
+            <img src="resources/outil.png" class="tools" onclick="Tool(one)"/>
+            <img src="resources/chat-icon.png" class="chat-icon" onclick="Dialog(one)"/>
         </div>
         <div class="gray-block mid-block">
             <img src="resources/cluster.jpg" class="cluster"/>
-            <a href="http://www.ikea.com/" class="ikea" target="blank"></a>
-            <a href="https://www.apple.com/" class="apple" target="blank"></a>
+            <div class="ikea"></div>
+            <div class="apple"></div>
         </div>
         <div class="gray-block right-block">
-            <img src="resources/book.png" class="book"/>
-            <img src="resources/towel.png" class="towel"/>
-            <div class="bricks">
+            <img src="resources/book.png" class="book" onclick="Book(one)"/>
+            <img src="resources/towel.png" class="towel" onclick="Towel(one)"/>
+            <div class="bricks" onclick="Bricks(one)">
                 <img src="resources/brick.jpg" class="brick"/>
                 <img src="resources/brick.jpg" class="brick"/>
             </div>
         </div>
         <div class="green">
-            <p id="TextInfo"></p>
+            <p id="TextInfo">Hi! Read the Book!</p>
             <!-- <form>
                 <input type="text" class="formulaire">
                 <input type="submit" value="Repondre" class="repondre">
