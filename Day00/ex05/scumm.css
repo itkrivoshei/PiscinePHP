@@ -163,6 +163,15 @@ p {
     border-radius: 10px;
 }
 /* Hide */
+.woman {
+    cursor: pointer;
+    width: 10%;
+    height: 220px;
+    float: right;
+    margin-top: -33%;
+    margin-right: 90%;
+    position: relative;
+}
 .ikea {
     cursor: pointer;
     width: 15%;
