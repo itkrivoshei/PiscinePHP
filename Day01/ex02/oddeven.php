@@ -15,4 +15,3 @@
         } else
             echo "'".$str."'"." is not a number.\n";
     }
-?>

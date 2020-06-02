@@ -8,4 +8,3 @@
             $rez .= $value." ";
         echo trim($rez)."\n";
     }
-?>

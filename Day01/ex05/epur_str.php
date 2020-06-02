@@ -8,4 +8,3 @@
                 echo "$mas[$i] ";
         echo "$mas[$i]\n";
     }
-?>
