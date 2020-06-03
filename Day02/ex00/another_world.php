@@ -2,4 +2,4 @@
 <?php
     if ($argc < 2)
         exit();
-    echo trim(preg_replace("/\s+|\t\r/", " ", $argv[1]))."\n";
+    echo trim(preg_replace("/\s+/", " ", $argv[1]))."\n";
