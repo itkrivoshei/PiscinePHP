@@ -1,12 +1,12 @@
 function createDiv() {
-    let content = prompt("Your to-do", "Ex: What you won't do");
-    let nbelem = getLastid();
+    let content = prompt("To-do");
+    let elem = getLastid();
     if (content != null && content != "") {
         let div = document.createElement("div");
-        div.className = "todo" + nbelem;
+        div.className = "todo" + elem;
         div.innerHTML = content;
         div.onclick = function(){
-            let ans = prompt("Are you sure you want to delete that to-do?", "Y/N");
+            let ans = prompt("Del?", "Y/N");
             if (ans === "Y" || ans === "y" || ans === "yes" || ans === "Yes" || ans === "YES") {
                 delCookie(div.className, div.innerHTML);
                 this.parentElement.removeChild(this);
@@ -17,57 +17,24 @@ function createDiv() {
     }
 }
 
-function getLastid()
-{
-    let i = 0;
-    let cname = "todo" + i;
-    let lastid = 0;
-    while (i < 500)
-    {
-        if (getCookie(cname) != "")
-            lastid = i;
-        i++;
-        cname = "todo" + i;
-    }
-    lastid++;
-    return lastid;
+function setCookie(point, value, time) {
+    let date = new Date();
+    date.setTime(date.getTime() + time);
+    let expires = "expires=" + date.toUTCString();
+    document.cookie = point + "=" + value + "; " + expires;
 }
 
-function loadDiv(content, cname) {
-    if (content != null && content != "") {
-        let div = document.createElement("div");
-        div.className = cname;
-        div.innerHTML = content;
-        div.onclick = function() {
-            let ans = prompt("Are you sure you want to delete that to-do?", "Y/N");
-            if (ans === "Y" || ans === "y" || ans === "yes" || ans === "Yes" || ans === "YES") {
-                delCookie(div.className, div.innerHTML);
-                this.parentElement.removeChild(this);
-            }
-        };
-        document.getElementById("ft_list").insertBefore(div, document.getElementById("ft_list").childNodes[0]);
-    }
+function delCookie(point, value) {
+    let date = new Date();
+    date.setTime(date.getTime() - (1000*60*60*24));
+    let expires = "expires="+ date.toUTCString();
+    document.cookie = point + "=" + value + "; " + expires;
 }
 
-function setCookie(cname, cvalue, time) {
-    let d = new Date();
-    d.setTime(d.getTime() + time);
-    let expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
-}
-
-function delCookie(cname, cvalue) {
-    let d = new Date();
-    d.setTime(d.getTime() - (1000*60*60*24));
-    let expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
-}
-
-function getCookie(cname) {
-    let name = cname + "=";
+function getCookie(point) {
+    let name = point + "=";
     let ca = document.cookie.split(';');
-
-    for(let i = 0; i <ca.length; i++) {
+    for(let i = 0; i < ca.length; i++) {
         let c = ca[i];
         while (c.charAt(0)==' ')
             c = c.substring(1);
@@ -75,4 +42,34 @@ function getCookie(cname) {
             return c.substring(name.length,c.length);
     }
     return "";
+}
+
+function getLastid() {
+    let i = 0;
+    let point = "todo" + i;
+    let last = 0;
+    while (i < 500) {
+        if (getCookie(point) != "")
+            ls = i;
+        i++;
+        point = "todo" + i;
+    } 
+    last++;
+    return last;
+}
+
+function loadDiv(content, point) {
+    if (content != null && content != "") {
+        let div = document.createElement("div");
+        div.className = point;
+        div.innerHTML = content;
+        div.onclick = function() {
+            let ans = prompt("Del?", "Y/N");
+            if (ans === "Y" || ans === "y" || ans === "yes" || ans === "Yes" || ans === "YES") {
+                delCookie(div.className, div.innerHTML);
+                this.parentElement.removeChild(this);
+            }
+        }
+        document.getElementById("ft_list").insertBefore(div, document.getElementById("ft_list").childNodes[0]);
+    }
 }

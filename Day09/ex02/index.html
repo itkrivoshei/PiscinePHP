@@ -5,20 +5,17 @@
 </head>
 <body>
     <div><button id="button" onclick="createDiv()">New</button></div>
-    <div id="main-wrapper">
-        <div id="ft_list">
-            <script>
-                let i = 0;
-                let cname = "todo" + i;
-
-                while (i < 500) {
-                    if (getCookie(cname) != "")
-                        loadDiv(getCookie(cname), cname);
-                    i++;
-                    cname = "todo" + i;
-                }
-            </script>
-        </div>
+    <div id="ft_list">
+        <script>
+            let i = 0;
+            let point = "todo" + i;
+            while (i < 500) {
+                if (getCookie(point) != "")
+                    loadDiv(getCookie(point), point);
+                i++;
+                point = "todo" + i;
+            }
+        </script>
     </div>
 </body>
 </html>
