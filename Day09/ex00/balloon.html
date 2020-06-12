@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            background: black;
+        }
+        #balloon {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            border-radius: 50%;
+            transition: 0.1s;
+        }
+    </style>
+    <script>
+        let balloon;
+        let size = 200;
+        let index_color = 0;
+        let color = {0: "#ff0000", 1: "#00ff00", 2: "#0000ff"};        
+        window.onload = function () {
+            balloon = document.querySelector("#balloon");
+            balloon.addEventListener("click", click_balloon);
+            balloon.addEventListener("mouseleave", mouse_on_balloon);
+        }
+        function mouse_on_balloon(){
+            size -= 5;
+            if (size < 200)
+                size = 200;
+            index_color--;
+            if (index_color < 0)
+                index_color = 2;
+            refresh_balloon(index_color);
+        }
+        function click_balloon() {
+            size += 10;
+            if (size > 420)
+                size = 200;
+            index_color++;
+            if (index_color > 2)
+                index_color = 0;
+            refresh_balloon(index_color);
+        }
+        function refresh_balloon(index_color){
+            balloon.style.width = size + "px";
+            balloon.style.height = size + "px";
+            balloon.style.backgroundColor = color[index_color];
+        }
+    </script>
+</head>
+<body>
+    <div id="balloon"></div>
+</body>
+</html>

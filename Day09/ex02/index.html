@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <script src="todo.js"></script>
+</head>
+<body>
+    <div><button id="button" onclick="createDiv()">New</button></div>
+    <div id="main-wrapper">
+        <div id="ft_list">
+            <script>
+                let i = 0;
+                let cname = "todo" + i;
+
+                while (i < 500) {
+                    if (getCookie(cname) != "")
+                        loadDiv(getCookie(cname), cname);
+                    i++;
+                    cname = "todo" + i;
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>
