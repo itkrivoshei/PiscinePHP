@@ -13,12 +13,12 @@
         }
     </style>
     <script>
-        let color = {0: '#ff0000', 1: '#00ff00', 2: '#0000ff'};
+        let color = {0: "#ff0000", 1: "#00ff00", 2: "#0000ff"};
         let index_color = 0;
         let balloon;
         let size = 200;
         $(document).ready(function(){
-            balloon = $('#balloon');
+            balloon = $("#balloon");
             balloon.click(balloonClick);
             balloon.mouseleave(balloonMouse);
         })
@@ -41,9 +41,9 @@
             balloonRefresh(index_color);
         }
         function balloonRefresh(index_color){
-            balloon.css('height', size);
-            balloon.css('width', size);
-            balloon.css('backgroundColor', color[index_color]);
+            balloon.css("height", size);
+            balloon.css("width", size);
+            balloon.css("backgroundColor", color[index_color]);
         }
     </script>
 </head>

@@ -21,10 +21,10 @@
     <script>
         $(document).ready(function() {
             setInterval(function() {alert("Please, use me...");}, 30000);
-            $('#submit').click(function () {
-                let left = parseInt($('#left').val());
-                let option = parseInt($('#option').val());
-                let right = parseInt($('#right').val());
+            $("#submit").click(function () {
+                let left = parseInt($("#left").val());
+                let option = parseInt($("#option").val());
+                let right = parseInt($("#right").val());
                 let result;
                 if (left < 0 || right < 0 || isNaN(left) || isNaN(right)) {
                     alert ("Error :(");
