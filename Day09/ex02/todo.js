@@ -64,7 +64,7 @@ function loadDiv(content, point) {
         div.className = point;
         div.innerHTML = content;
         div.onclick = function() {
-            let ans = prompt("Del?", "Y/N");
+            let ans = prompt("Del?", "y/n");
             if (ans === "Y" || ans === "y" || ans === "yes" || ans === "Yes" || ans === "YES") {
                 delCookie(div.className, div.innerHTML);
                 this.parentElement.removeChild(this);

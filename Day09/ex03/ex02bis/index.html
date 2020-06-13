@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="todo.js"></script>
+</head>
+<body>
+    <div><button id="button">New</button></div>
+    <div id="ft_list">
+        <script>
+            let i = 0;
+            let point = "todo" + i;
+            while (i < 100) {
+                if (getCookie(point) != "")
+                    loadDiv(getCookie(point), point);
+                i++;
+                point = "todo" + i;
+            }
+        </script>
+    </div>
+</body>
+</html>
